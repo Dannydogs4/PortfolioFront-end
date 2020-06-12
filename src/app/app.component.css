@@ -1,0 +1,27 @@
+app-root{
+  position: absolute;
+  width: 100%;
+  min-width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 80% 10%;
+  grid-template-areas: "header"
+                        "MainContent"
+                        "footer";
+}
+
+app-header{
+  grid-area: header;
+
+
+}
+router-outlet + *{
+  grid-area: MainContent;
+  overflow-y: auto;
+
+}
+app-footer{
+  grid-area: footer;
+
+}

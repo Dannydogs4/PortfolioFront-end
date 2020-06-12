@@ -1,0 +1,215 @@
+.skills-component-backgroundImage{
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  height: 80%;
+}
+.skills-component-skilldropdown{
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: opacity 200ms ease-out, transform 300ms ease-out;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 90%;
+  height: 60%;
+  background-color: gray;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: lightblue;
+  z-index: 100;
+}
+.skills-component-skilldropdownOpen{
+  display: block !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.skills-component-skillunorderedlist{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  align-items: center;
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+  height: 100%;
+}
+.skills-component-skilldropdownclosebutton{
+  font-size: 3vh;
+  background: lightblue;
+  color: gray;
+  border-radius: 10px;
+  width: 50%;
+}
+.skills-component-skilldropdownclosebutton:active{
+ background: darkgray;
+}
+.skills-component-skilldropdownclosebutton:focus{
+  outline: none;
+ }
+.skills-component-skilllistitem{
+  font-weight: bold;
+  font-size: 2vh;
+  color: lightblue;
+
+}
+
+.skills-component-maincontent{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background: rgba(128,128,128,0.9);
+
+}
+
+
+.skills-component-skillbutton{
+  font-size: 3vh;
+  width: 40vh;
+  background: lightblue;
+  color: gray;
+  border-radius: 10px;
+}
+.skills-component-skillbutton:active{
+  background: darkgray;
+}
+.skills-component-skillbutton:focus{
+  outline: none;
+}
+.skills-component-programmmingLanguages{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+}
+.skills-component-frameworks{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+}
+.skills-component-IDE{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+}
+.skills-component-databases{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+}
+.skills-component-skillItemBorder{
+  border-width: 4px;
+  border-style: solid;
+  border-color: gray;
+}
+
+@media (min-width: 37.5rem){
+
+}
+
+@media (min-width: 65rem){
+  .skills-component-desktopmaincontent{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "Languages Frameworks"
+                          "Environments Databases";
+    background: rgba(128,128,128,0.9);
+
+  }
+  .skills-component-desktoplanguagesunorderedlist{
+    grid-area: Languages;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 0;
+    margin-bottom: 0;
+    align-items: center;
+    border-width: 3px;
+    border-style: solid;
+    border-color: lightblue;
+  }
+  .skills-component-desktopframeworksunorderedlist{
+    grid-area: Frameworks;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 0;
+    margin-bottom: 0;
+    align-items: center;
+    border-width: 3px;
+    border-style: solid;
+    border-color: lightblue;
+  }
+  .skills-component-desktopenvironmentsunorderedlist{
+    grid-area: Environments;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 0;
+    margin-bottom: 0;
+    align-items: center;
+    border-width: 3px;
+    border-style: solid;
+    border-color: lightblue;
+  }
+  .skills-component-desktopdatabasesunorderedlist{
+    grid-area: Databases;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 0;
+    margin-bottom: 0;
+    align-items: center;
+    border-width: 3px;
+    border-style: solid;
+    border-color: lightblue;
+  }
+  .skills-component-desktopskilltitle{
+    color: lightblue;
+    font-size: 2rem;
+    text-decoration: underline;
+
+  }
+  .skills-component-skilllistitem{
+    color: lightblue;
+    font-size: 1.5rem;
+  }
+}
+
+

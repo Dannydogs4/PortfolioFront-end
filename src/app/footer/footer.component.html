@@ -1,0 +1,16 @@
+<div class = "footer-component-EmailNoticeDropDown" [ngClass] = "{'footer-component-EmailNoticeDropDownOpen': dropDownActive}" [style.display] = "displayEmailNotice">
+  <ul class= "footer-component-EmailNoticeunorderedlist">
+    <li class = "footer-component-EmailNoticelistitem" style="text-decoration: underline;">Note</li>
+    <li class = "footer-component-EmailNoticelistitem">The email address, dskwarcha@comcast.net, has been copied to your device</li>
+    <button class = "footer-component-EmailNoticedropdownclosebutton" (click) = "EmailNoticeDropDownClose()">OK</button>
+  </ul>
+</div>
+<header class = "footer-component-background">
+  <a class = "footer-component-CopyEmail" (click) = "CopyEmailAddress()">
+    <img class = "footer-component-personalLinkImage" src = "../assets/Email-icon.png">
+  </a>
+  <a class = "footer-component-personalLink"*ngFor = "let personalLink of personalLinks"  [href] = "personalLink.link" target="_blank">
+    <img href = ""class = "footer-component-personalLinkImage" [src] = "personalLink.imagePath">
+  </a>
+</header>
+

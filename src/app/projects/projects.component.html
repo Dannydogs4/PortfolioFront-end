@@ -1,0 +1,26 @@
+<div class = "project-component-backgroundimage" [ngStyle] = "BackgroundImage"></div>
+<div class = "projects-component-linkDropDown" [ngClass] = "{'projects-component-linkDropDownOpen': dropDownActive}" [style.display] = "displayEmailNotice">
+  <ul class= "projects-component-linkunorderedlist">
+    <li class = "projects-component-linklistitem" style="text-decoration: underline;">Note</li>
+    <li class = "projects-component-linklistitem">{{noLinkReason.Note}}</li>
+    <li class = "projects-component-linklistitem" style="text-decoration: underline;">Reason</li>
+    <li class = "projects-component-linklistitem">{{noLinkReason.Reason}}</li>
+    <br>
+    <li class = "projects-component-linklistitem">
+      Please contact me through the contact page or send an email with the email address provided through the yellow email
+      button if you have any comments, questions, or concerns about this project.
+    </li>
+    <button class = "projects-component-linkdropdownclosebutton" (click) = "LinkDropDownClose()">Close</button>
+  </ul>
+</div>
+<div class = "projects-component-container" (click) = "LinkDropDownClose()">
+  <div class = "projects-component-projectType" *ngFor = "let projectType of projects.projectsInterface, let type = index">
+    <p class = "projects-component-projecttypename">{{projectTypeString[type]}}</p>
+    <div class = "projects-component-projects" *ngFor = "let project of projectType">
+      <img class = "projects-component-projectsImage" [src] = "getImage('gif', project.imageGif.ImageContent)" alt = "{{projects.imageDescription}}">
+      <p class = "projects-component-projectDescription">{{project.imageDescription}}</p>
+      <button class = "projects-component-projectButton" (click) = "OpenProjectLink(project.projectLink)">Project</button><button class = "projects-component-gitHubButton" (click) = "OpenGitHubLink(project.gitHubLink)">GitHub</button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,30 @@
+<div class = "testimonials-component-BackgroundImage" [ngStyle]= "BackgroundImage"></div>
+<div class = "testimonials-component-testimonialsdropdown"[ngClass] = "{'testimonials-component-testimonialsdropdownOpen': dropDownActive}" [style.display] = "displayTestimonial">
+  <ul class= "testimonials-component-testimonialunorderedlist">
+    <button class = "testimonials-component-testimonialdropdownclosebutton" (click) = "TestimonialDropDownClose()">Close</button>
+    <li class = "testimonials-component-testimoniallistitem" style="text-decoration: underline;">Author</li>
+    <li class = "testimonials-component-testimoniallistitem">{{testimonialItem.Author}}</li>
+    <li class = "testimonials-component-testimoniallistitem" style="text-decoration: underline;">Testimonial</li>
+    <li class = "testimonials-component-testimoniallistitem" style="align-self: flex-start;">{{testimonialItem.Testimonial}}</li>
+  </ul>
+</div>
+<div class = "testimonials-component-container" (click) = "TestimonialDropDownClose()" *ngIf = "enableMobileNavigation">
+  <div class = "testimonials-component-testimonialsbox">
+    <div class = "testimonials-component-testimonial" *ngFor = "let testimonial of testimonials.testimonials">
+      <p class = "testimonials-component-testimonialquote">{{testimonial.quote}}</p>
+      <p class = "testimonials-component-testimonialauthor">{{testimonial.author}}</p>
+      <button (click) = "getTestimonialLink(testimonial.author, testimonial.testimonial)" class = "testimonials-component-button">Testimonial</button>
+    </div>
+  </div>
+</div>
+<div class = "testimonials-component-BackgroundColor" *ngIf = "!enableMobileNavigation"></div>
+<div class = "testimonials-component-desktopcontainer" *ngIf = "!enableMobileNavigation">
+  <div class = "testimonials-component-testimonialscontainer" *ngFor = "let desktoptestimonials of testimonials.testimonials">
+    <p class = "testimonials-component-testimonialitem" style="text-decoration: underline;">Author</p>
+    <p class = "testimonials-component-testimonialitem">{{desktoptestimonials.author}}</p>
+    <p class = "testimonials-component-testimonialitem" style="text-decoration: underline;">Quote</p>
+    <p class = "testimonials-component-testimonialitem">{{desktoptestimonials.quote}}</p>
+    <p class = "testimonials-component-testimonialitem" style="text-decoration: underline;">Testimonial</p>
+    <p class = "testimonials-component-testimonialitem">{{desktoptestimonials.testimonial}}</p>
+  </div>
+</div>

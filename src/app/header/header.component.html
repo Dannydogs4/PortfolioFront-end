@@ -1,0 +1,32 @@
+<header class = "header-component-background">
+  <button *ngIf = "enableMobileNavigation" class = "header-component-mobilebutton" (click) = "showMobileNavigation(currentPage)">{{currentPage}}</button>
+  <a class = "header-component-title">Daniel Skwarcha Portfolio</a>
+  <nav class = 'header-component-nav' [ngClass]= "{'open': mobileNavigation}" [style.display] = "displayNavMobile">
+    <ul class = "header-component-listItems">
+      <li class = "header-component-listItem">
+        <button *ngIf = "enableMobileNavigation"(click) = "showMobileNavigation('Home')" class = "header-component-listItemButton"  routerLink= "/home" routerLinkActive="active">Home</button>
+        <a *ngIf = "!enableMobileNavigation" class = "header-component-listItemLink"  routerLink= "/home" routerLinkActive="active">Home</a>
+      </li>
+      <li class = "header-component-listItem">
+        <button *ngIf = "enableMobileNavigation" (click) = "showMobileNavigation('Projects')" class = "header-component-listItemButton" routerLink= "/projects" routerLinkActive="active">Projects</button>
+        <a *ngIf = "!enableMobileNavigation" class = "header-component-listItemLink" routerLink= "/projects" routerLinkActive="active">Projects</a>
+      </li>
+      <li class = "header-component-listItem">
+        <button *ngIf = "enableMobileNavigation" (click) = "showMobileNavigation('Skills')" class = "header-component-listItemButton" routerLink= "/skills" routerLinkActive="active">Skills</button>
+        <a *ngIf = "!enableMobileNavigation" class = "header-component-listItemLink" routerLink= "/skills" routerLinkActive="active">Skills</a>
+      </li>
+      <li class = "header-component-listItem">
+        <button *ngIf = "enableMobileNavigation" (click) = "showMobileNavigation('Testimonials')" class = "header-component-listItemButton" routerLink= "/testimonials" routerLinkActive="active">Testimonials</button>
+        <a *ngIf = "!enableMobileNavigation" class = "header-component-listItemLink" routerLink= "/testimonials" routerLinkActive="active">Testimonials</a>
+      </li>
+      <li class = "header-component-listItem">
+        <button *ngIf = "enableMobileNavigation" (click) = "showMobileNavigation('Contact')" class = "header-component-listItemButton" routerLink= "/contact" routerLinkActive="active">Contact</button>
+        <a *ngIf = "!enableMobileNavigation" class = "header-component-listItemLink" routerLink= "/contact" routerLinkActive="active">Contact</a>
+      </li>
+      <li class = "header-component-listItem">
+        <button *ngIf = "enableMobileNavigation" (click) = "showMobileNavigation('About')" class = "header-component-listItemButton" routerLink= "/about" routerLinkActive="active">About</button>
+        <a *ngIf = "!enableMobileNavigation" class = "header-component-listItemLink" routerLink= "/about" routerLinkActive="active">About</a>
+      </li>
+    </ul>
+  </nav>
+</header>

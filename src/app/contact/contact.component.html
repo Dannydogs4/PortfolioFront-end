@@ -1,0 +1,23 @@
+<div class = "contact-component-background"></div>
+<app-loading-spinner *ngIf = "isLoading" style="position: relative; top: 40%; left: 45%;"></app-loading-spinner>
+<div class = "contact-component-confirmationdropdown" [ngClass] = "{'contact-component-confirmationdropdownOpen': dropDownActive}" [style.display] = "displayConfirmation">
+  <ul class= "contact-component-confirmunorderedlist">
+    <li class = "contact-component-confirmlistitem" style="text-decoration: underline;">Status</li>
+    <li class = "contact-component-confirmlistitem">{{messageStatus}}</li>
+    <button class = "contact-component-confirmdropdownclosebutton" (click) = "ConfirmDropDownClose()">OK</button>
+  </ul>
+</div>
+<form *ngIf = "!isLoading"(ngSubmit) = "onSubmit(f)" #f="ngForm" class = "contact-component-form" (click) = "ConfirmDropDownClose()">
+  <div class = "formItems">
+    <label class = "formItem" for="email">Email:</label>
+    <input class = "formItem" name = "email" type="email" placeholder="Ex: myEmail@example.com" ngModel required email #email = "ngModel">
+    <span class = "help-block" style= "color: red;" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+  </div>
+
+  <div class = "formItems" style="height: 30vh;">
+    <label class = "formItem" for="message">Message:</label>
+    <textarea style = "resize: none; height: 80%;" class = "formItem" name="message" placeholder="Please place your message to me here." ngModel required #message = "ngModel"></textarea>
+    <span class = "help-block" style="color: red;" *ngIf="!message.valid && message.touched">Please enter a message!</span>
+  </div>
+  <button [disabled] = "!f.valid"class = "formButton" type= "submit">Submit</button>
+</form>

@@ -1,0 +1,32 @@
+<div class = "skills-component-backgroundImage" [ngStyle] = "BackgroundImage"></div>
+<div class = "skills-component-skilldropdown"[ngClass] = "{'skills-component-skilldropdownOpen': dropDownActive}" [style.display] = "displaySkill">
+  <ul class= "skills-component-skillunorderedlist">
+    <button class = "skills-component-skilldropdownclosebutton" (click) = "SkillsDropDownClose()">Close</button>
+    <li class = "skills-component-skilllistitem" *ngFor = "let skillItem of dropDownSkills">{{skillItem}}</li>
+  </ul>
+</div>
+<div *ngIf = "enableMobileNavigation"class = "skills-component-maincontent" (click) = "SkillsDropDownClose()">
+
+  <button class = "skills-component-skillbutton" (click) = "ActiveSkillsDropDown(skills.programmingLanguages)">Languages</button>
+  <button class = "skills-component-skillbutton" (click) = "ActiveSkillsDropDown(skills.frameworks)">Frameworks</button>
+  <button class = "skills-component-skillbutton" (click) = "ActiveSkillsDropDown(skills.ide)"> Environments</button>
+  <button class = "skills-component-skillbutton" (click) = "ActiveSkillsDropDown(skills.databases)">Databases</button>
+</div>
+<div *ngIf = "!enableMobileNavigation" class = "skills-component-desktopmaincontent">
+  <ul class= "skills-component-desktoplanguagesunorderedlist">
+    <p class = "skills-component-desktopskilltitle">Languages</p>
+    <li class = "skills-component-skilllistitem" *ngFor = "let language of skills.programmingLanguages">{{language}}</li>
+  </ul>
+  <ul class= "skills-component-desktopframeworksunorderedlist">
+    <p class = "skills-component-desktopskilltitle">Frameworks</p>
+    <li class = "skills-component-skilllistitem" *ngFor = "let framework of skills.frameworks">{{framework}}</li>
+  </ul>
+  <ul class= "skills-component-desktopenvironmentsunorderedlist">
+    <p class = "skills-component-desktopskilltitle">Environments</p>
+    <li class = "skills-component-skilllistitem" *ngFor = "let environment of skills.ide">{{environment}}</li>
+  </ul>
+  <ul class= "skills-component-desktopdatabasesunorderedlist">
+    <p class = "skills-component-desktopskilltitle">Databases</p>
+    <li class = "skills-component-skilllistitem" *ngFor = "let database of skills.databases">{{database}}</li>
+  </ul>
+</div>

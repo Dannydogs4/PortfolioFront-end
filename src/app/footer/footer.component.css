@@ -1,0 +1,130 @@
+.footer-component-EmailNoticeDropDown{
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: opacity 200ms ease-out, transform 300ms ease-out;
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  width: 90%;
+  height: auto;
+  background-color: gray;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: lightblue;
+  z-index: 100;
+}
+.footer-component-EmailNoticeDropDownOpen{
+  display: block !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.footer-component-EmailNoticeunorderedlist{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+  height: 100%;
+}
+.footer-component-EmailNoticelistitem{
+  font-weight: bold;
+  font-size: 2vh;
+  color: lightblue;
+}
+.footer-component-EmailNoticedropdownclosebutton{
+  font-size: 3vh;
+  background: lightblue;
+  color: gray;
+  border-radius: 10px;
+  width: 50%;
+}
+.footer-component-background{
+  width: 100%;
+  height: 100%;
+  flex-wrap: nowrap;
+  background: gray;
+  border-width: 2px;
+  border-style: solid;
+  border-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.footer-component-personalLink :hover{
+cursor: pointer;
+
+}
+.footer-component-CopyEmail :hover{
+cursor: pointer;
+}
+.footer-component-personalLinkImage{
+  width: 9.5vh;
+  height: 9.5vh;
+
+}
+
+@media (min-width: 37.5rem){
+
+}
+
+@media (min-width: 65rem){
+
+  .footer-component-EmailNoticeDropDown{
+    top: 10%;
+    left: 30%;
+    width: 40%;
+  }
+  .footer-component-EmailNoticeunorderedlist{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .footer-component-EmailNoticelistitem{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: lightblue;
+  }
+  .footer-component-EmailNoticedropdownclosebutton{
+    font-size: 1.5rem;
+    background: lightblue;
+    color: gray;
+    border-radius: 10px;
+    width: 50%;
+  }
+  .footer-component-background{
+    width: 100%;
+    height: 100%;
+    flex-wrap: nowrap;
+    background: gray;
+    border-width: 2px;
+    border-style: solid;
+    border-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .footer-component-personalLink :hover{
+  cursor: pointer;
+
+  }
+  .footer-component-CopyEmail :hover{
+  cursor: pointer;
+  }
+  .footer-component-personalLinkImage{
+    width: 9.5vh;
+    height: 9.5vh;
+
+  }
+}

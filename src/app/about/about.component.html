@@ -1,0 +1,22 @@
+<div class = "about-component-backgroundImage" [ngStyle] = "BackgroundImage"></div>
+<div class = "about-component-NewPDFTabDropDown" [ngClass] = "{'about-component-NewPDFTabDropDownOpen': dropDownActive}" [style.display] = "displayPDFMessage">
+  <ul class= "about-component-NewPDFTabunorderedlist">
+    <li class = "about-component-NewPDFTablistitem">
+    The Resume PDF will open in a new tab. Are you alright with this?</li>
+    <button class = "about-component-NewPDFTabdropdownbutton" (click) = "getPDF(about.resume.ImageContent)">Yes</button>
+    <button class = "about-component-NewPDFTabdropdownbutton" (click) = "downloadPDF()">Download Resume</button>
+    <button class = "about-component-NewPDFTabdropdownbutton" (click) = "NewPDFTabDropDownClose()">Close</button>
+  </ul>
+</div>
+<ul class = "about-component-FlexContainer">
+  <li class="about-component-AboutText">{{about.explainWebsite}}</li>
+  <li class="about-component-AboutText">{{about.graduate}}</li>
+  <li class="about-component-AboutText">{{about.interestsTech}}</li>
+  <li class="about-component-AboutText">{{about.interestsNonTech}}</li>
+  <li class="about-component-AboutText">{{about.goals}}</li>
+  <a class="about-component-ResumeLink" (click) = "NewTabMessage()">Resume</a>
+</ul>
+
+
+
+
