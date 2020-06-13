@@ -77,7 +77,7 @@ export class HeaderComponent implements OnInit, OnDestroy{
     ); // subscribe()
   } // ngOnInit
 
-
+  // Brings out the navigation options for the user on mobile devices. Also sets the text on the button to whatever the text is in the parameter.
   showMobileNavigation(changePage: string){
     this.currentPage = changePage;
 
@@ -85,16 +85,17 @@ export class HeaderComponent implements OnInit, OnDestroy{
     {
       this.mobileNavigation = false;
       setTimeout(()=>{this.displayNavMobile = "none";},500);
-    }
+    } // if
     else if (this.mobileNavigation === false)
     {
       this.displayNavMobile = "block";
       setTimeout(()=>{this.mobileNavigation = true;},100);
-    }
-  }
+    } // else if
+  } // showMobileNavigation(changePage: string)
 
+  // Runs when this component changes. Note: This only happens when the user refreshes the page. This is due to the header component not being part of the routing module.
+  // Unsubscribes from the subscription for the breakpointObserver
   ngOnDestroy(){
     this.subscription.unsubscribe();
-  }
-
-}
+  } // ngOnDestroy
+} // class HeaderComponent

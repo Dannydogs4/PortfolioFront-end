@@ -1,6 +1,6 @@
 // Author: Daniel Skwarcha
 
-// My imports that are needed to communicate with different parts of the application and provide features to this service
+// My imports that are needed to communicate with different parts of the application and provide features to this component
 import { Component, OnInit, OnDestroy } from "@angular/core"; // Needed to treat about.component.ts as a component and use methods related to a component
 import { About } from './about.model';  // Needed to use information from About inside the HTML
 import { ActivatedRoute, Data } from '@angular/router'; // Needed to implement the resolve guard/ resolve service
