@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 interface TestimonialsInterface{
   quote: string;
   testimonial: string;

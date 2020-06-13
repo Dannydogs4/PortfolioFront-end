@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 import { NgModule } from '@angular/core';
 import { SkillsComponent } from './skills.component';
 import { CommonModule } from '@angular/common';

@@ -1,3 +1,6 @@
+// Author: Daniel Skwarcha
+// Template used from loading.io/css
+
 import { Component } from '@angular/core';
 
 @Component({

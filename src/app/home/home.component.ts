@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Home } from './home.model';
 import { Subscription } from 'rxjs';
@@ -12,7 +14,6 @@ import { ActivatedRoute, Data } from '@angular/router';
 export class HomeComponent implements OnInit, OnDestroy{
   BackgroundImages = [{},{},{},{}];
   home: Home;
-  isLoading = false;
   myString = 'data:image/jpg;base64,';
   subscription: Subscription;
   constructor(private route: ActivatedRoute){}
@@ -20,7 +21,6 @@ export class HomeComponent implements OnInit, OnDestroy{
   ngOnInit(): void{
      this.subscription= this.route.data.subscribe(
         (data: Data) =>{
-          this.isLoading = true;
           this.home = data['home'];
           this.BackgroundImages = [
             {'background' : 'url(' + this.getImage(this.home.image[0].ImageContent) + ')',
@@ -39,8 +39,7 @@ export class HomeComponent implements OnInit, OnDestroy{
             'background-repeat' : 'no-repeat',
             'background-size' : 'cover',
             'background-position': 'center'}
-          ]
-          this.isLoading = false;
+          ];
         }
       )
   }

@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Testimonials } from './testimonials.model';
 import { Subscription } from 'rxjs';

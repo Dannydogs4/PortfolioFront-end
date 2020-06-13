@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule, PreloadAllModules} from '@angular/router';
 
@@ -7,7 +9,8 @@ const appRoutes: Routes = [{path: '', redirectTo: '/home', pathMatch: 'full'},
 {path: 'skills', loadChildren: () => import('./skills/skills.module').then(m => m.SkillsModule)},
 {path: 'testimonials', loadChildren: () => import('./testimonials/testimonials.module').then(m => m.TestimonialsModule)},
 {path: 'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)},
-{path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule)}
+{path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule)},
+{path: '**', redirectTo: '/home'}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})],

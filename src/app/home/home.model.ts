@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 export class Home{
 
   image: any;

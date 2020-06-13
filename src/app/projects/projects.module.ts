@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 import { NgModule } from '@angular/core';
 import { ProjectsComponent } from './projects.component';
 import { CommonModule } from '@angular/common';

@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 import { Testimonials } from './testimonials.model';
 import { Subject } from 'rxjs';
 import { Injectable } from '@angular/core';

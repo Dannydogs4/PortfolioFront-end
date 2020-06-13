@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 import { Subject } from 'rxjs';
 import { Projects } from './projects.model';
 import { Injectable } from '@angular/core';

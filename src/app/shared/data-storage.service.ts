@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 import { Injectable } from "@angular/core";
 import {HttpClient, HttpResponse, HttpHeaders} from '@angular/common/http';
 import { AboutService } from '../about/about.service';

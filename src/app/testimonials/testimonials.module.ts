@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 import { NgModule } from '@angular/core';
 import { TestimonialsComponent } from './testimonials.component';
 import { CommonModule } from '@angular/common';

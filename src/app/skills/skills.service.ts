@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 import { Skills } from './skills.model';
 import { Subject } from 'rxjs';
 import { Injectable } from '@angular/core';

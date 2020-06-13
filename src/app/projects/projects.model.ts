@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 export interface projectsInterface{
   gitHubLink: string;
   imageDescription: string;

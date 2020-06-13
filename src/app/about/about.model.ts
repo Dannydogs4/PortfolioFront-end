@@ -1,3 +1,5 @@
+// Author: Daniel Skwarcha
+
 export class About{
   public image: any
   public imageName: string;
