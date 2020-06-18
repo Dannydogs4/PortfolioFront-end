@@ -21,7 +21,7 @@ export class DataStorageService{
   private portfolioURL: string;
   constructor(private http: HttpClient, private aboutService: AboutService, private homeService: HomeService,
     private projectsService: ProjectsService, private skillsService: SkillsService, private testimonialsService: TestimonialsService){
-      this.portfolioURL = 'http://localhost:8080/';
+      this.portfolioURL = 'https://dskwarchaportfolio.herokuapp.com/';
     }
 
   fetchSkills(){
