@@ -4,6 +4,7 @@
   height: 80%;
   z-index: -1;
   background-color: gray;
+  background-attachment: fixed;
 }
 .contact-component-confirmationdropdown{
   opacity: 0;
@@ -64,6 +65,7 @@ background: darkgray;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  background-color: gray;
 }
 .formItems{
   min-width: 80%;
